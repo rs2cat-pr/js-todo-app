@@ -1,17 +1,19 @@
 body {
-  font-family: meiryo;
+  font-family: sans-serif;
   background-color: #e0ffff;
 }
 
 h2 {
   padding: 10px;
   margin: 5px 150px;
+  color: #4682b4;
 }
 
 button {
   border-radius: 8px;
   border: none;
   padding: 4px 16px;
+  margin: 0px 2px;
 }
 button:hover {
   background-color: #00008b;
@@ -21,7 +23,7 @@ button:hover {
 .input-area {
   background-color: #afeeee;
   width: 500px;
-  height: 70px;
+  height: 90px;
   padding: 10px;
   margin: 8px;
   border-radius: 10px;
@@ -32,6 +34,7 @@ input {
   border-radius: 10px;
   border: none;
   padding: 6px 16px;
+  margin: 15px 2px;
   outline: none;
   text-align: center;
 }
@@ -54,9 +57,19 @@ input {
   border-radius: 10px;
 }
 
-.heading {
+span {
+  margin-right: 8px;
+}
+
+h4 {
   text-align: center;
-  margin-top: 0;
+  margin: 5px;
   font-weight: bold;
-  color: #010144;
+  color: #708090;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
 }
