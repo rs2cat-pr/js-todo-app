@@ -6,33 +6,50 @@
   </head>
 
   <body>
-    <h2>TODO管理システム</h2>
+    <h2>タスク管理システム</h2>
 
     <div class="input-area">
-      <p class="heading">新規追加</p>
+      <h4 class="heading">　新規追加</h4>
       <input placeholder="todoの内容を入力" />
       <button>add</button> 
     </div>
     
+   
     <div class="incomplete-area">
-      <p　class="heading">未完了</p>
+        <h4>未完了</h4>
       <ul>
+          <div　class="list-row">
         <li>
-          TODO内容
+            <span>TODO内容を記載してください</span>
+        <button>done</button>
+        <button>delete</button>
         </li>
-      </ul>
-      <button>done</button>
-      <button>delete</button>
+        <li>
+            <span>TODO内容を記載してください</span>
+            <button>done</button>
+            <button>delete</button>
+            </li>
+        </div>
+      </ul>  
     </div>
     
     <div class="complete-area">
-      <p　class="heading">完了</p>
-      <ul>
-        <li>
-          完了したTODO
-        </li>
+        <h4>完了</h4> 
+          <div class="list-row">
+              <ul>
+              <li>
+                  <span>完了したTODOが移動します</span>  
+                  <button>undo</button>     
+                 </li>
+                 <li>
+                    <span>完了したTODOが移動します</span>  
+                    <button>undo</button>     
+                   </li>  
       </ul>
-      <button>undo</button>
+      </div>
+      
+      
+    
     </div>
 
     <script src="src/index.js"></script>
