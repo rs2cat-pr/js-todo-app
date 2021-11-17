@@ -26,9 +26,17 @@ const onClickAdd = () => {
   //buttonタグ（完了）の作成
   const completeButton = document.createElement("button");
   completeButton.innerText = "done";
+  //完了機能の発火
+  completeButton.addEventListener("click", () => {
+    alert("done");
+  });
   //buttonタグ(削除）の作成
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "delete";
+  //削除機能の発火
+  deleteButton.addEventListener("click", () => {
+    alert("delete");
+  });
 
   //liタグの子要素に各要素を詰める
   li.appendChild(span);
@@ -42,3 +50,11 @@ const onClickAdd = () => {
 document
   .getElementById("add-button")
   .addEventListener("click", () => onClickAdd());
+
+/**
+ * 完了機能
+ */
+
+/**
+ * 削除機能
+ */
