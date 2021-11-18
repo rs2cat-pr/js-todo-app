@@ -68,7 +68,7 @@ h4 {
   color: #708090;
 }
 
-li {
+.list-content {
   display: flex;
   align-items: center;
   padding-bottom: 3px;
