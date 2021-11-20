@@ -10,21 +10,22 @@
 
     <div class="input-area">
       <h4 class="heading">　新規追加</h4>
-      <input placeholder="todoの内容を入力" />
-      <button>add</button> 
+      <input id="add-text" placeholder="todoの内容を入力" />
+      <button id="add-button">add</button> 
     </div>
     
    
     <div class="incomplete-area">
         <h4>未完了</h4>
-      <ul>
+      <ul id="incomplete-list">
           <div　class="list-row">
-        <li>
+
+        <li class="list-content">
             <span>TODO内容を記載してください</span>
         <button>done</button>
         <button>delete</button>
         </li>
-        <li>
+        <li class="list-content">
             <span>TODO内容を記載してください</span>
             <button>done</button>
             <button>delete</button>
@@ -37,16 +38,21 @@
         <h4>完了</h4> 
           <div class="list-row">
               <ul>
-              <li>
+
+              <li class="list-content">
+
                   <span>完了したTODOが移動します</span>  
                   <button>undo</button>     
                  </li>
-                 <li>
+
+                 <li class="list-content">
+
                     <span>完了したTODOが移動します</span>  
                     <button>undo</button>     
                    </li>  
-      </ul>
-      </div>
+
+              </ul>
+
     </div>
     <script src="src/index.js"></script>
   </body>
