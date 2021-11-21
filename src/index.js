@@ -58,3 +58,65 @@ document
 /**
  * 削除機能
  */
+
+        .removeChild(undoButton.parentNode);
+      //親要素に書かれたテキストを取得
+      const text = undoTarget.firstElementChild.innerText;
+      //undoボタンの親要素をリセットする
+      undoTarget.innerText = null;
+      //<li>に再度Todoの内容を詰める
+      //doneボタン、deleteボタンを生成、<li>の子要素にする
+      const span = document.createElement("span");
+      span.innerText = text;
+      //buttonタグ（完了）の作成
+      const completeButton = document.createElement("button");
+      completeButton.innerText = "done";
+
+      //buttonタグ(削除）の作成
+      const deleteButton = document.createElement("button");
+      deleteButton.innerText = "delete";
+      //削除機能の発火
+      deleteButton.addEventListener("click", () => {
+        //削除ボタンの親タグ<li>を未完了リストから削除
+        deleteFromList("incomplete-list", deleteButton.parentNode);
+      });
+
+      //<li>タグのl子要素に各要素を設定
+      undoTarget.appendChild(span);
+      undoTarget.appendChild(completeButton);
+      undoTarget.appendChild(deleteButton);
+
+      //<li>を未完了リストの配下に置く
+      document.getElementById("incomplete-list").appendChild(undoTarget);
+    });
+    //<li>タグのl子要素に各要素を設定
+    addTarget.appendChild(span);
+    addTarget.appendChild(undoButton);
+    //完了リストに<li>を追加
+    document.getElementById("complete-list").appendChild(addTarget);
+  });
+
+  /**
+   * 削除機能
+   */
+  //buttonタグ(削除）の作成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "delete";
+  //削除機能の発火
+  deleteButton.addEventListener("click", () => {
+    //削除ボタンの親タグ<li>を未完了リストから削除
+    deleteFromList("incomplete-list", deleteButton.parentNode);
+  });
+
+  //liタグの子要素に各要素を詰める
+  li.appendChild(span);
+  li.appendChild(completeButton);
+  li.appendChild(deleteButton);
+
+  document.getElementById("incomplete-list").appendChild(li);
+};
+
+//リストから各要素を削除する関数を定義
+const deleteFromList = (listName, target) => {
+  document.getElementById(listName).removeChild(target);
+};
